@@ -1,0 +1,66 @@
+
+	table,form,th,td{
+	display:block;
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+#all {
+	height:100px;
+	width:1000px;
+	margin:0 auto;
+}
+
+#head {
+	height: 200px;
+	width: 1000px;
+	background-color:#6F9
+}
+#main {
+	height: 800px;
+	width: 1000px;
+	background-color:#FFC
+}
+#foot {
+	height: 100px;
+	width: 1000px;
+	background-color:#CCC
+}
+table{
+margin-top:10px;
+margin-left:100px;
+
+
+}
+th{
+	height:50px;
+	width:156px;
+
+}
+td{
+	height:50px;
+	width:156px;
+    text-align:center;
+	text-decoration: none;
+
+	}
+	
+.add{
+	margin-top:20px;
+	margin-left:800px;
+}
+.mydiv {
+line-height:20px;
+border: 1px solid #0080FF;
+font-size: 12px;
+z-index:999;
+width: 500px;
+height: 220px;
+left:50%;
+top:20%;
+margin-left:-150px!important;/*FF IE7 该值为本身宽的一半 */
+margin-top:-60px!important;/*FF IE7 该值为本身高的一半*/
+margin-top:0px;
+position:fixed!important;/* FF IE7*/
+position:absolute;/*IE6*/
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>课程列表</title>
+<link href="/course.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="all">
+	<div id="head">
+	</div>
+	<div id="main">
+	<form id="add" th:action="@{/addCourse}" method="post">
+	<input class="add" name="number" type="text" />
+	<input class="add" name="coursename" type="text" />
+	<input class="add" name="add" type="submit" value="新增课程"/>
+	</form>
+	<table  border="2" align="center" >
+  <tr>
+    <th>课程编号</th>
+    <th>课程名称</th>
+    <th>操作</th>
+	<th>操作</th>	
+    <th>操作</th>
+  </tr>
+  
+  <tr th:each="post:${posts}">
+    <td th:id="${post.id}"><h1 th:text="${post.course_id}"></h1></td>
+    <td th:id="${post.id}"><h1 th:text="${post.course_name}"></h1></td>
+    <td><a th:href="@{/delete/__${post.id}__}"/>删除</td>
+    <td><input name="sel" type="button"  value="详情"/></td>
+    <td>
+    <input th:id="${post.id}" name="sel" type="button"  value="修改" onclick="showDivFun(this)"/>
+  </tr>
+   
+</table>
+	</div>
+	    <div id="foot">
+    
+    </div>
+	
+
+　　
+</div>
+</body>
+<script>
+var id;
+function showDivFun(a){
+	id = a.id;
+	window.location.href="http://localhost:91/update?id="+id;
+	document.getElementById("popDiv").style.display = "block";
+}
+</script>
+</html>
